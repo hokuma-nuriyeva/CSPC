@@ -23,3 +23,17 @@ Create the environment for a given lab:
 
 **Conclusion:**
 - Successfully configured a reproducible Conda environment and Git repository. Built tests to verify physical decay laws and optimized performance using NumPy vectorization.
+
+---
+
+## PW1 --- Lab B: Data, Plotting, and Automation
+
+**What I built:**
+- Data analysis script (`plot.py`) comparing observed decay data against the analytical model $N_0 e^{-\lambda t}$.
+- Automated build pipeline using Snakemake.
+
+**Data & Model Agreement:**
+- The observed data points closely match the exponential analytical curve with $\lambda = 0.3$.
+
+**Snakemake Pipeline:**
+- Automatically tracks timestamps of inputs (`decay_observed.csv`, `plot.py`) and rebuilds `figure.png` only when source files change.
