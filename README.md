@@ -37,3 +37,18 @@ Create the environment for a given lab:
 
 **Snakemake Pipeline:**
 - Automatically tracks timestamps of inputs (`decay_observed.csv`, `plot.py`) and rebuilds `figure.png` only when source files change.
+
+---
+
+## PW2 --- Lab A: Motion from Tracking Data
+
+**Results:**
+- Mean Acceleration: ~ -8.58 m/s² (close to theoretical -9.81 m/s²).
+- Standard deviation of acceleration is high due to noise amplification.
+
+**Why Acceleration is Noisy:**
+- Numerical differentiation calculates small differences between neighboring points, which greatly magnifies random measurement noise present in the raw position data.
+
+**Integrating Back:**
+- Integrating noisy acceleration back to velocity and position suppresses the noise because integration accumulates values and sums random errors, effectively averaging them out.
+- The recovered position matches the original position within less than a meter.
