@@ -52,3 +52,21 @@ Create the environment for a given lab:
 **Integrating Back:**
 - Integrating noisy acceleration back to velocity and position suppresses the noise because integration accumulates values and sums random errors, effectively averaging them out.
 - The recovered position matches the original position within less than a meter.
+
+---
+
+## PW2 --- Lab A: Motion from Tracking Data
+
+**Results & Analysis:**
+- Mean Acceleration: ~ -8.58 m/s² (closely matching theoretical $g \approx -9.81$ m/s²).
+- Standard deviation of acceleration is high due to noise amplification.
+
+**Why Acceleration is Noisy:**
+- Numerical differentiation compares nearby position measurements, which greatly magnifies random noise. Differentiating twice (from position to acceleration) severely amplifies measurement errors.
+
+**Integrating Back:**
+- Integration suppresses noise because it accumulates values step-by-step, naturally canceling out random errors. The reconstructed position matched the original data within less than a meter.
+
+**Bonus (2D Trajectory):**
+- Analyzed 2D plane motion from `trajectory.csv` using $v_x = \frac{dx}{dt}$ and $v_y = \frac{dy}{dt}$.
+- Computed total speed $s = \sqrt{v_x^2 + v_y^2}$ over time and plotted the spatial trajectory.
